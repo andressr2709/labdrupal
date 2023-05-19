@@ -1,0 +1,19 @@
+uuid: 941dca0c-51db-4ba0-99e2-b0a5ff9ff3b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_curso_compartido
+field_name: field_curso_compartido
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
