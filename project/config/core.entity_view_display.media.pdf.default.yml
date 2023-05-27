@@ -1,0 +1,36 @@
+uuid: d3bcacbd-dd63-4125-b6a6-7fb9f8a1531a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.pdf.field_categoria
+    - field.field.media.pdf.field_media_file
+    - media.type.pdf
+  module:
+    - file
+id: media.pdf.default
+targetEntityType: media
+bundle: pdf
+mode: default
+content:
+  field_categoria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_media_file:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
