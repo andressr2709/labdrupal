@@ -1,0 +1,29 @@
+uuid: d2f5808e-b234-4256-b6a3-4d6f1fadd4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_categoria
+    - media.type.pdf
+    - taxonomy.vocabulary.categoria
+id: media.pdf.field_categoria
+field_name: field_categoria
+entity_type: media
+bundle: pdf
+label: Categoria
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categoria: categoria
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

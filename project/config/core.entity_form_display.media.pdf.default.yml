@@ -1,0 +1,45 @@
+uuid: c29a62e4-de12-4f18-8f4f-cdcc91ece41f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.pdf.field_categoria
+    - field.field.media.pdf.field_media_file
+    - media.type.pdf
+  module:
+    - file
+id: media.pdf.default
+targetEntityType: media
+bundle: pdf
+mode: default
+content:
+  field_categoria:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_file:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  status: true
+  uid: true
